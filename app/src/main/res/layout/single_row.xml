@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_color">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/sr_iv"
+        android:src="@drawable/ic_main_iv"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sr_name_tv"
+        android:text="Dummy Name"
+        android:layout_toRightOf="@id/sr_iv"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sr_batting_style_tv"
+        android:text="Dummy Batting style"
+        android:layout_toRightOf="@id/sr_iv"
+        android:layout_below="@id/sr_name_tv"
+        android:layout_marginTop="10dp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
