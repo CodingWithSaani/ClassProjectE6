@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProjectE6">
         <activity
+            android:name=".CustomArrayAdapterWork.CustomListActivity"
+            android:exported="false" />
+        <activity
             android:name=".Lists.SimpleList"
             android:exported="false" />
         <activity
