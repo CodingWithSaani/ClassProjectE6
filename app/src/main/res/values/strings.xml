@@ -11,6 +11,7 @@
     <string name="move_btn">Move</string>
     <string name="move_to_alert_screen_btn">Move To Alert Screen</string>
     <string name="show_alert_dialog_btn">Show alert dialog</string>
+    <string name="move_to_custom_list_text">Move to custom list</string>
 
 
 </resources>

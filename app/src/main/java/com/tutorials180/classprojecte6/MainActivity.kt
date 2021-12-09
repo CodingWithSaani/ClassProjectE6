@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.tutorials180.classprojecte6.AlertScreens.AlertDialogScreen
+import com.tutorials180.classprojecte6.CustomArrayAdapterWork.CustomListActivity
 
 class MainActivity : AppCompatActivity() {
     var valueOne:Int=0
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var moveBtn:Button
 
     private lateinit var moveToAlertScreenBtn:Button
+    private lateinit var moveToCustomListScreenBtn:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         moveBtn=findViewById(R.id.move_btn)
 
         moveToAlertScreenBtn=findViewById(R.id.move_alert_page_btn)
+        moveToCustomListScreenBtn=findViewById(R.id.moveToCustomListActivity)
         calculateBtn.setOnClickListener {
             calculateValues()
         }
@@ -51,6 +54,10 @@ class MainActivity : AppCompatActivity() {
 
         moveToAlertScreenBtn.setOnClickListener {
             moveToAlertScreen()
+        }
+
+        moveToCustomListScreenBtn.setOnClickListener {
+            startActivity(Intent(MainActivity@this,CustomListActivity::class.java))
         }
 
 
