@@ -3,6 +3,7 @@ package com.tutorials180.classprojecte6.SimpleRoomImplementation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.tutorials180.classprojecte6.R
 import com.tutorials180.classprojecte6.databinding.ActivityStudentRoomBinding
@@ -21,6 +22,10 @@ class StudentRoomActivity : AppCompatActivity() {
         objActivityStudentRoom.addStudentBtn.setOnClickListener {
             addStudentToDb()
         }
+
+        objActivityStudentRoom.getStudentBtn.setOnClickListener {
+            getAllStudents()
+        }
     }
 
     private fun createStudentDb()
@@ -31,6 +36,28 @@ class StudentRoomActivity : AppCompatActivity() {
             StudentDatabase::class.java,"Student Database")
                 .allowMainThreadQueries()
                 .build()
+        }
+        catch (ex:Exception)
+        {
+            Toast.makeText(applicationContext,ex.toString(),Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun getAllStudents()
+    {
+        try
+        {
+            val listOfStudents=objStudentDb.getDAOObject().getAllStudents()
+            objActivityStudentRoom.studentRv.layoutManager=LinearLayoutManager(this)
+
+            if(listOfStudents.isNotEmpty()) {
+                objActivityStudentRoom.studentRv.adapter = RVCustomAdapter(listOfStudents)
+            }
+            else
+            {
+                Toast.makeText(applicationContext,"No student record found",Toast.LENGTH_LONG).show()
+            }
+
         }
         catch (ex:Exception)
         {
