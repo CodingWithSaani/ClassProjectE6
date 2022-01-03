@@ -52,4 +52,6 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.4.0")
     kapt("androidx.room:room-compiler:2.4.0")
 
+    implementation 'com.google.android.gms:play-services-location:19.0.0'
+
 }

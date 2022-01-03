@@ -9,6 +9,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.tutorials180.classprojecte6.AlertScreens.AlertDialogScreen
 import com.tutorials180.classprojecte6.CustomArrayAdapterWork.CustomListActivity
+import com.tutorials180.classprojecte6.LocationService.LocationServiceActivity
 import com.tutorials180.classprojecte6.SimpleRoomImplementation.StudentRoomActivity
 
 class MainActivity : AppCompatActivity() {
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var moveToCustomListScreenBtn:Button
 
     private lateinit var moveToStudentRoomActivityBtn:Button
+    private lateinit var moveToLocationServiceActivityBtn:Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -49,6 +52,7 @@ class MainActivity : AppCompatActivity() {
         moveToCustomListScreenBtn=findViewById(R.id.moveToCustomListActivity)
 
         moveToStudentRoomActivityBtn=findViewById(R.id.moveToStudentRoomActivity)
+        moveToLocationServiceActivityBtn=findViewById(R.id.moveToLocationServiceActivity)
         calculateBtn.setOnClickListener {
             calculateValues()
         }
@@ -67,6 +71,10 @@ class MainActivity : AppCompatActivity() {
 
         moveToStudentRoomActivityBtn.setOnClickListener {
             startActivity(Intent(MainActivity@this,StudentRoomActivity::class.java))
+        }
+
+        moveToLocationServiceActivityBtn.setOnClickListener {
+            startActivity(Intent(MainActivity@this,LocationServiceActivity::class.java))
         }
     }
 
