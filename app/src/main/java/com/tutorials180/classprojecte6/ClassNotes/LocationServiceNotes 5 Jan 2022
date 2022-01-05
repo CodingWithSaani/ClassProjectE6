@@ -1,0 +1,54 @@
+Lecture Class Learning Outcome
+1- How to find out actual address from given LAT and LNG
+2- How to send text message using from your mobile application
+
+
+<Steps to achieve first CLO>
+Step 1: We made changes to XML in order to display address
+           a) Street address
+           b) City
+           c) Province
+           d) Zip code
+           e) Country name
+
+Step 2: We declared and initialized GeoCoder class's object
+Step 3: We create a new function with name "getActualAddress()"
+        What this function will do:
+        It will take lat and lan and then will convert to actual address
+
+Step 4: We convert us Lat, LNG to actual address using geoCoder class's object
+Step 5: We will map address that we get from geoCoder to XML views.
+
+Step 6: Call the "getActualAddress()" inside "onLocationChanged()" method
+
+<Steps to achieve second CLO>
+Step 1: Create a separate package for it "SMSWorking"
+Step 2: Create a new activity "SMSWorkingActivity"
+
+Step 3: Add Views to SMSWorkingActivity's XML
+        a) EditText for receiver phone number
+        b) EditText for text message
+        c) Button to send message
+
+Step 4: Create ViewBinding object of SMSWorkingActivity to bring XML views to Kotlin file.
+Step 5: Add SEND_SMS permission to Manifest file.
+
+Step 6: Add onClickListener to sendSMSBtn and call sendSMS method inside it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

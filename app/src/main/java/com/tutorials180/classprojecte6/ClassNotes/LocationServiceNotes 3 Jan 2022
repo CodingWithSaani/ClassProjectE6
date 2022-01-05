@@ -1,0 +1,22 @@
+Step 1: Add permissions to manifest file.
+        i) ACCESS_FINE_LOCATION
+        ii)ACCESS_COARSE_LOCATION
+       iii)INTERNET
+
+Step 2: Add dependency into your build.gradle(app) file
+        implementation 'com.google.android.gms:play-services-location:18.0.0'
+
+Step 3: Add views to activity xml file.
+Step 4: Create a binding object for xml file.
+
+Step 5: Create object of LocationManager class into our activity class
+Step 6: Implement Location Listener interface
+
+Step 7: Create a user defined method to get Current Location
+Step 8: Call the user defined method on the on click listener of getLocation Btn
+
+Step 9: call the "requestLocationUpdates" method with LocationManager object
+Step10: Add permission check with "requestLocationUpdates" method
+
+Step11: Check permission result with "onRequestPermissionsResult"
+Step12: Display lat and lng on the text view by writing code in "onLocationChanged" method

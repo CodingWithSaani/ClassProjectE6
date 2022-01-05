@@ -3,6 +3,7 @@ package com.tutorials180.classprojecte6.LocationService
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -12,37 +13,14 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.tutorials180.classprojecte6.databinding.ActivityLocationServiceBinding
 import java.lang.Exception
+import java.util.*
 
-
-/*
-    Step 1: Add permissions to manifest file.
-        i) ACCESS_FINE_LOCATION
-        ii)ACCESS_COARSE_LOCATION
-       iii)INTERNET
-
-    Step 2: Add dependency into your build.gradle(app) file
-        implementation 'com.google.android.gms:play-services-location:18.0.0'
-
-    Step 3: Add views to activity xml file.
-    Step 4: Create a binding object for xml file.
-
-    Step 5: Create object of LocationManager class into our activity class
-    Step 6: Inherit Location Listener class
-
-    Step 7: Create a user defined method to get Current Location
-    Step 8: Call the user defined method on the on click listener of getLocation Btn
-
-    Step 9: call the "requestLocationUpdates" method with LocationManager object
-    Step10: Add permission check with "requestLocationUpdates" method
-
-    Step11: Check permission result with "onRequestPermissionsResult"
-    Step12: Display lat and lng on the text view by writing code in "onLocationChanged" method
- */
 class LocationServiceActivity : AppCompatActivity() , LocationListener
 {
     private lateinit var mLocationServiceActivityBinding:ActivityLocationServiceBinding  //Declare
     private lateinit var mLocationManager: LocationManager //Declare
 
+    private lateinit var mGeoCoder:Geocoder  //Declare
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
@@ -51,6 +29,7 @@ class LocationServiceActivity : AppCompatActivity() , LocationListener
         setContentView(mLocationServiceActivityBinding.root)
         mLocationManager=getSystemService(Context.LOCATION_SERVICE) as LocationManager  //Initialize
 
+        mGeoCoder= Geocoder(LocationServiceActivity@this, Locale.getDefault())  //Initialize
         mLocationServiceActivityBinding.lsGetLocationBtn.setOnClickListener { getCurrentLocationOfDevice() }
     }
 
@@ -90,8 +69,38 @@ class LocationServiceActivity : AppCompatActivity() , LocationListener
     override fun onLocationChanged(location: Location) {
         try
         {
-            mLocationServiceActivityBinding.lsLatLocationTv.text=location.latitude.toString()
-            mLocationServiceActivityBinding.lsLngLocationTv.text=location.longitude.toString()
+            mLocationServiceActivityBinding.lsLatLocationTv.text="Latitude:${location.latitude}"
+            mLocationServiceActivityBinding.lsLngLocationTv.text="Longitude:${location.longitude}"
+
+            getActualAddress(location.latitude,location.longitude)
+        }
+        catch (ex:Exception)
+        {
+            Toast.makeText(applicationContext,ex.message,Toast.LENGTH_LONG).show()
+        }
+    }
+
+    //
+    private fun getActualAddress(lat:Double,lng:Double)
+    {
+        try
+        {
+            val currentAddress=mGeoCoder.getFromLocation(lat,lng,1) //it will return us Address in a list
+            val streetAdd=currentAddress[0].getAddressLine(0)
+
+            val cityName=currentAddress[0].locality
+            val provinceName=currentAddress[0].adminArea
+
+            val zipCode=currentAddress[0].postalCode
+            val countryName=currentAddress[0].countryName
+
+            mLocationServiceActivityBinding.lsActualAddressTv.text=streetAdd
+            mLocationServiceActivityBinding.lsCityTv.text=cityName
+
+            mLocationServiceActivityBinding.lsProvinceTv.text=provinceName
+            mLocationServiceActivityBinding.lsZipCodeTv.text=zipCode.toString()
+
+            mLocationServiceActivityBinding.lsCountryTv.text=countryName
         }
         catch (ex:Exception)
         {

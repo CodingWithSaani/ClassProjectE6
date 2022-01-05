@@ -8,12 +8,12 @@
     tools:context=".LocationService.LocationServiceActivity">
 
     <Button
+        android:id="@+id/ls_get_location_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ls_get_location_btn"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
-        android:text="Get Location"/>
+        android:text="Get Location" />
 
     <TextView
         android:layout_width="match_parent"
@@ -36,4 +36,60 @@
         android:padding="10dp"
         android:text="Lng:"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_actual_address_tv"
+        android:layout_below="@id/ls_lng_location_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="Address:"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_city_tv"
+        android:layout_below="@id/ls_actual_address_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="City:"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_province_tv"
+        android:layout_below="@id/ls_city_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="Province/State:"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_zip_code_tv"
+        android:layout_below="@id/ls_province_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="Zip Code:"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_country_tv"
+        android:layout_below="@id/ls_zip_code_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:padding="10dp"
+        android:text="Country:"
+        />
+
 </RelativeLayout>
