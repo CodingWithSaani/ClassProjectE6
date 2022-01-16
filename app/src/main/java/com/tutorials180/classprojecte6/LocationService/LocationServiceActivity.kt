@@ -18,7 +18,7 @@ import java.util.*
 class LocationServiceActivity : AppCompatActivity() , LocationListener
 {
     private lateinit var mLocationServiceActivityBinding:ActivityLocationServiceBinding  //Declare
-    private lateinit var mLocationManager: LocationManager //Declare
+    private lateinit var mLocationManager: LocationManager//Declare
 
     private lateinit var mGeoCoder:Geocoder  //Declare
     override fun onCreate(savedInstanceState: Bundle?)
@@ -45,7 +45,6 @@ class LocationServiceActivity : AppCompatActivity() , LocationListener
             {
                 ActivityCompat.requestPermissions(this,arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),2)
             }
-            mLocationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000,5f,this)
         }
         catch (ex:Exception)
         {
@@ -88,7 +87,7 @@ class LocationServiceActivity : AppCompatActivity() , LocationListener
             val currentAddress=mGeoCoder.getFromLocation(lat,lng,1) //it will return us Address in a list
             val streetAdd=currentAddress[0].getAddressLine(0)
 
-            val cityName=currentAddress[0].locality
+            val cityName=currentAddress[0].subLocality
             val provinceName=currentAddress[0].adminArea
 
             val zipCode=currentAddress[0].postalCode
