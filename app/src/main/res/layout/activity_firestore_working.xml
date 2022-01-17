@@ -16,4 +16,24 @@
         android:text="Add Single Document"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/fs_working_add_single_doc_model_btn"
+        android:layout_below="@id/fs_working_add_single_doc_btn"
+        android:text="Add Single Document With Model"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/fs_working_get_single_doc_model_btn"
+        android:layout_below="@id/fs_working_add_single_doc_model_btn"
+        android:text="Get Single Document"
+        />
+
 </RelativeLayout>
