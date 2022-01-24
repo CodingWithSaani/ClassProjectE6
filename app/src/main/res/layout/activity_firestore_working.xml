@@ -36,4 +36,44 @@
         android:text="Get Single Document"
         />
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/fs_working_add_single_doc_model_without_id_btn"
+        android:layout_below="@id/fs_working_get_single_doc_model_btn"
+        android:text="Add Single Document With Model without id"
+        />
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    android:id="@+id/fs_working_get_all_docs"
+    android:layout_below="@id/fs_working_add_single_doc_model_without_id_btn"
+    android:text="Get All Docs"
+    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/fs_working_perform_write_batch_btn"
+        android:layout_below="@id/fs_working_get_all_docs"
+        android:text="Perform Write Batch"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/fs_working_delete_doc_btn"
+        android:layout_below="@id/fs_working_perform_write_batch_btn"
+        android:text="Delete document"
+        />
+
 </RelativeLayout>
