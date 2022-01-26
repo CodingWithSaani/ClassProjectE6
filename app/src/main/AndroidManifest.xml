@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClassProjectE6">
         <activity
+            android:name=".FirebaseWorking.FbAuthWorkingActivity"
+            android:exported="false" />
+        <activity
             android:name=".FirebaseWorking.FirestoreWorkingActivity"
             android:exported="false" />
         <activity

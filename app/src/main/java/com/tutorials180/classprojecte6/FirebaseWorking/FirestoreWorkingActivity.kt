@@ -156,7 +156,6 @@ class FirestoreWorkingActivity : AppCompatActivity() {
         }
     }
 
-
     private fun getAllDocuments()
     {
         try
@@ -227,7 +226,6 @@ class FirestoreWorkingActivity : AppCompatActivity() {
         }
     }
 
-
     private fun deleteSingleDocument()
     {
         try
@@ -251,6 +249,8 @@ class FirestoreWorkingActivity : AppCompatActivity() {
             Toast.makeText(applicationContext, "Exception:${ex.message}", Toast.LENGTH_SHORT).show();
         }
     }
+
+
 
 
 
