@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.tutorials180.classprojecte6.AlertScreens.AlertDialogScreen
+import com.tutorials180.classprojecte6.BroadCastReceiverWorking.BRWorkingActivity
 import com.tutorials180.classprojecte6.CustomArrayAdapterWork.CustomListActivity
 import com.tutorials180.classprojecte6.FirebaseWorking.FbAuthWorkingActivity
 import com.tutorials180.classprojecte6.FirebaseWorking.FirestoreWorkingActivity
@@ -83,8 +84,12 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(Intent(MainActivity@this,FirestoreWorkingActivity::class.java))
 //        }
 
+//        moveToLocationServiceActivityBtn.setOnClickListener {
+//            startActivity(Intent(MainActivity@this,FbAuthWorkingActivity::class.java))
+//        }
+
         moveToLocationServiceActivityBtn.setOnClickListener {
-            startActivity(Intent(MainActivity@this,FbAuthWorkingActivity::class.java))
+            startActivity(Intent(MainActivity@this,BRWorkingActivity::class.java))
         }
     }
 

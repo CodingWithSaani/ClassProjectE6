@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BroadCastReceiverWorking.BRWorkingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/br_working_tv"
+        android:text="WIFI"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/br_working_btn"
+        android:layout_below="@id/br_working_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="WIFI Btn"/>
+
+</RelativeLayout>
