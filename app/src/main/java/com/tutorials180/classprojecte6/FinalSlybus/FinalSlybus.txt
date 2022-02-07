@@ -1,0 +1,52 @@
+1- App Development
+2- Android App Development
+3- Basic Structure of Android OS
+4- Why Android Application Development
+5- Android Studio IDE
+6- Devices with Android OS
+7- Project Structure
+   app => Manifest Dir, Java Dir, Res Dir
+   Grade Script
+8- Activity
+    > Frontend File (xml)
+    > Backend File (Kotlin)
+        >Life-Cycle of an activity
+9- onCreate, Bundle, findViewById, id.xml, setContentView method, Package
+10-try-catch block, Toast
+11-Intent, startActivity method, class.java?
+12-Type of Intent -> Implicit and Explicit
+13-XML namespace
+14-Adapters, Adapter View, Data Source
+   Adapter
+       Array Adapter, CursorAdapter, BaseAdapter
+   Adapter View
+       List, GridView, Spinner
+   Data Source
+       Arrays, Lists, Database Offline, Database server based
+15- Custom Array Adapter
+      Class -> Custom Array Adapter
+16- RecyclerView
+       RecyclerView.Adapter
+       ViewHolder
+17- Room Lib
+    Components i) Entity ii) DAO iii)Database
+18- Locations
+    Location Manager, Location Listener, Permissions, ReverseGeoCoding
+    Locale. GeoCoding
+19- SMS Manager
+20- Firebase
+    instance, object -> hash, class object,
+    collection, document, listeners-> onSuccessListener, onFailureListener
+    document add, add document with id, set(), add(), delete(), update()
+    get() -> directly display properties, convert -> document to class object
+
+
+21- Firebase Auth
+    Enable Firebase Auth for email registration,
+    Sign Up User, Sign In User, User session, currentUser, sign-out
+22- BroadCast Receiver
+    Create, Register, Unregister
+    Receive SMS, display a toast
+23- Services
+    service create, add service to manifest, service start, service stop
+24- Alert Dialog

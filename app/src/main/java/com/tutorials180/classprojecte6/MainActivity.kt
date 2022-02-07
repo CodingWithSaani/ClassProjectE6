@@ -13,6 +13,7 @@ import com.tutorials180.classprojecte6.CustomArrayAdapterWork.CustomListActivity
 import com.tutorials180.classprojecte6.FirebaseWorking.FbAuthWorkingActivity
 import com.tutorials180.classprojecte6.FirebaseWorking.FirestoreWorkingActivity
 import com.tutorials180.classprojecte6.LocationService.LocationServiceActivity
+import com.tutorials180.classprojecte6.ServiceWorking.ServiceWorkingActivity
 import com.tutorials180.classprojecte6.SimpleRoomImplementation.StudentRoomActivity
 
 class MainActivity : AppCompatActivity() {
@@ -88,8 +89,12 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(Intent(MainActivity@this,FbAuthWorkingActivity::class.java))
 //        }
 
+//        moveToLocationServiceActivityBtn.setOnClickListener {
+//            startActivity(Intent(MainActivity@this,BRWorkingActivity::class.java))
+//        }
+
         moveToLocationServiceActivityBtn.setOnClickListener {
-            startActivity(Intent(MainActivity@this,BRWorkingActivity::class.java))
+            startActivity(Intent(MainActivity@this,ServiceWorkingActivity::class.java))
         }
     }
 
