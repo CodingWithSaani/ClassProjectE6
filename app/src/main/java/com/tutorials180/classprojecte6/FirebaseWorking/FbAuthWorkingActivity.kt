@@ -69,6 +69,26 @@ class FbAuthWorkingActivity : AppCompatActivity()
         }
     }
 
+    private fun signOutUser()
+    {
+        try
+        {
+            val currentLoggedInUser=FirebaseAuth.getInstance().currentUser
+            if(currentLoggedInUser==null)
+            {
+                Toast.makeText(applicationContext, "No User is logged in", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                FirebaseAuth.getInstance().signOut()
+                Toast.makeText(applicationContext, "Logged Out", Toast.LENGTH_SHORT).show();
+            }
+        }
+        catch (ex:Exception)
+        {
+            Toast.makeText(applicationContext, "${ex.message}", Toast.LENGTH_SHORT).show();
+        }
+    }
 
 
 
